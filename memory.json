@@ -5,7 +5,9 @@
     "current_college": "Jaypee Institute of Information Technology",
     "reddit_username": "that-ad-user1607"
   },
-  "preferences": {},
+  "preferences": {
+    "music_preferences": "loves listening to music by Diljit Dosanjh"
+  },
   "other": {
     "current_location": "Lajpat Nagar, New Delhi, Delhi, Pincode: 110024",
     "education": "Completed Class 12th at Summer Fields School, Kailash Colony, Delhi with scores of 95% in Physics, Maths, and Computer Science",

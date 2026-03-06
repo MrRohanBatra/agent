@@ -1,3 +1,5 @@
+import random
+
 from langchain.tools import tool 
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
@@ -13,8 +15,8 @@ auth_manager = SpotifyClientCredentials(
 sp = spotipy.Spotify(auth_manager=auth_manager)
 
 def search_song(query, limit=5):
-
-    results = sp.search(q=query, type="track", limit=limit)
+    fetch_count = max(limit * 3, 20)
+    results = sp.search(q=query, type="track", limit=fetch_count)
 
     songs = []
     for track in results["tracks"]["items"]:
@@ -24,8 +26,8 @@ def search_song(query, limit=5):
             "album": track["album"]["name"],
             "url": track["external_urls"]["spotify"]
         })
-
-    return songs
+    random.shuffle(songs)
+    return songs[:limit]
 
 
 def autoplay_song(query):
@@ -33,8 +35,8 @@ def autoplay_song(query):
 
     if songs:
         song = songs[0]
-        # print(f"🎵 Playing: {song['name']} - {song['artist']}")
         webbrowser.open(song["url"])
+        return f"🎵 Playing: {song['name']} - {song['artist']}"
     else:
         print("No song found")
 

@@ -1,0 +1,22 @@
+{
+  "users": {
+    "rohan": {
+      "user_profile": {
+        "name": "Rohan Batra",
+        "github_username": "mrrohanbatra",
+        "current_college": "Jaypee Institute of Information Technology",
+        "reddit_username": "that-ad-user1607"
+      },
+      "preferences": {
+        "music_preferences": "loves listening to music by Diljit Dosanjh",
+        "coding_preference": "loves Python"
+      },
+      "other": {
+        "current_location": "Lajpat Nagar, New Delhi, Delhi, Pincode: 110024",
+        "education": "Completed Class 12th at Summer Fields School, Kailash Colony, Delhi with scores of 95% in Physics, Maths, and Computer Science",
+        "email": "rohanbatra.in@gmail.com",
+        "education_details": ""
+      }
+    }
+  }
+}
