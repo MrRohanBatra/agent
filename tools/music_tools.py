@@ -18,10 +18,12 @@ auth_manager = SpotifyOAuth(
     cache_path="spotify_token.json",
     open_browser=True
 )
-
+playing:str=None
+queued:list[str]=[]
 sp = spotipy.Spotify(auth_manager=auth_manager)
 
 def autoplay_song(query: str, no_of_songs: int = 1):
+    global playing,queued
     results = sp.search(q=query, type="track", limit=no_of_songs)
 
     if not results or not results["tracks"]["items"]:
@@ -35,16 +37,12 @@ def autoplay_song(query: str, no_of_songs: int = 1):
 
     try:
         current_playback = sp.current_playback()
-
-        # responses:list[dict] = []
-        playing:str=None
-        queued:list[str]=[]
         for i, track in enumerate(tracks):
             track_name = track["name"]
             artist_name = track["artists"][0]["name"]
             track_uri = track["uri"]
-
-            if i == 0 and not (current_playback and current_playback.get("is_playing")):
+            
+            if i == 0 and (no_of_songs == 1 or not (current_playback and current_playback.get("is_playing"))):
                 sp.start_playback(uris=[track_uri])
                 playing=f"{track_name} - {artist_name}"
             else:

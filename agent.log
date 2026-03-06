@@ -169,3 +169,255 @@ tool result:{'location': 'Dehli', 'temperature_c': 26.4, 'condition': 'Mist'}
 toolargs: {}
 tool result:{'status': 'success', 'country': 'India', 'countryCode': 'IN', 'region': 'DL', 'regionName': 'National Capital Territory of Delhi', 'city': 'Delhi', 'zip': '110055', 'lat': 28.6542, 'lon': 77.2373, 'timezone': 'Asia/Kolkata', 'isp': 'Reliance Jio Infocomm Limited', 'org': 'Reliance Jio Infocomm Limited', 'as': 'AS55836 Reliance Jio Infocomm Limited', 'query': '49.36.182.166'}
 2026-03-06 20:39:47,610 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:14:03,949 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:16:36,557 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:17:32,092 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:17:39,875 - ERROR - HTTP Error for PUT to https://api.spotify.com/v1/me/player/play with Params: {} returned 404 due to Player command failed: No active device found
+2026-03-06 21:17:39,879 - INFO - calling tool play_music
+toolargs: {'query': 'Diljit Dosanjh Punjabi songs', 'no_of_songs': 5}
+tool result:{
+  "error": " Failed to play/queue song. Error: http status: 404, code: -1 - https://api.spotify.com/v1/me/player/play:\n Player command failed: No active device found, reason: NO_ACTIVE_DEVICE"
+}
+2026-03-06 21:17:43,029 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:17:52,338 - ERROR - HTTP Error for PUT to https://api.spotify.com/v1/me/player/play with Params: {} returned 404 due to Player command failed: No active device found
+2026-03-06 21:17:52,340 - INFO - calling tool play_music
+toolargs: {'query': 'Diljit Dosanjh Bollywood songs', 'no_of_songs': 5}
+tool result:{
+  "error": " Failed to play/queue song. Error: http status: 404, code: -1 - https://api.spotify.com/v1/me/player/play:\n Player command failed: No active device found, reason: NO_ACTIVE_DEVICE"
+}
+2026-03-06 21:17:55,847 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:18:07,062 - INFO - calling tool web_search
+toolargs: {'query': 'best ways to relax while waiting boredom'}
+tool result:{'answer': None, 'results': [{'title': 'How Not to Be Bored When You Have to Wait - The Atlantic', 'url': 'https://www.theatlantic.com/ideas/archive/2024/03/waiting-boredom-frustration-strategies/677767/', 'content': 'The best way to lower the misery of waiting, then, turns out to be not to change the world but to change oneself. That insight can apply not'}, {'title': 'Anxiety Waiting: 5 Tips to Calm Down While You Wait - Psych Central', 'url': 'https://psychcentral.com/anxiety/what-to-do-when-you-have-to-wait-and-cant-stop-worrying', 'content': 'Soothing sensory tools and grounding techniques, such as music and deep breathing, can help when you’re experiencing waiting-related anxiety. Anxiety from waiting often relates to our perception of certainty and control, says Michelle Davis, PhD, licensed clinical psychologist in California specializing in anxiety research and treatment. Many people experience anxiety while waiting. ## 5 tips to reduce anxiety while waiting. Consider trying these tips to refocus your mind, relax your nervous system, and reduce the experience of anxiety while waiting. Deep breathing is an effective technique for dealing with anxiety while waiting, and it’s accessible anywhere and at any time. Creating a calming environment can also be helpful for reducing waiting anxiety, according to a 2018 study. “Many times, the beliefs we attach to anxiety can be more painful than the experience of the emotion itself,” Davis says. Implementing tips to reground yourself while you wait, along with mental health support, can help reduce the experience of anxiety while waiting.'}, {'title': "What to do when you're bored: 95 creative ways to reset - Calm", 'url': 'https://www.calm.com/blog/what-to-do-when-youre-bored', 'content': 'Sometimes boredom feels heavy — like you don’t have the energy to start something big. These small, playful ways to spark curiosity can shift you out of autopilot and make the world feel a little bigger… even if you don’t leave the couch. These simple, low-pressure ways to connect can soften that feeling and remind you that you’re not as alone as your brain sometimes tries to tell you you are. Fun is relative, but often, some of the most engaging things you can do at home are the simplest: rearranging a small space, playing music you haven’t listened to in years, or trying a new way of doing something familiar (like making your usual cup of tea), but with extra attention. ### What should I do when I’m bored and don’t feel like doing anything? Instead of trying to do something, try to simply notice how you’re feeling without needing to change it: Lie down, breathe, or even stare out the window.'}, {'title': 'Boost your brain with boredom - Mayo Clinic Health System', 'url': 'https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/boost-your-brain-with-boredom', 'content': 'Join a club, try a new hobby, play a game, read a book or cook a new recipe to ignite your creativity and provide a distraction from boredom.'}, {'title': 'Try Doing This the Next Time You Feel Bored', 'url': 'https://www.oprah.com/inspiration/martha-beck-how-to-stop-feeling-bored', 'content': '# Try Doing This the Next Time You Feel Bored. They experience it as a signal that they could be learning, sleeping, playing or watching something more interesting; that every moment of boredom is, in a sense, costing them their right lives. Boredom is actually the feeling of being trapped doing one thing while wanting to do something else. This suggests that we\'re at maximum boredom levels when we\'re trying to stick with something while other things tickle the edge of our awareness. As ridiculous as it sounds, simply stopping is one of the most powerful boredom busters you can master. But so are theater lobbies before the show, long and boring checkout lines, and everyone\'s favorite, the john." Reading during such times not only occupies the moment, but gives you something to recall and chew on during things like dull conversations and meetings. Try this: When you\'re bored, just repeat the mantra "I accept" while fully experiencing the boredom.'}]}
+2026-03-06 21:18:28,319 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:18:58,161 - INFO - calling tool web_search
+toolargs: {'query': 'how to deal with waiting related anxiety tips python coding relaxation techniques'}
+tool result:{'answer': None, 'results': [{'title': 'Less stress, more focus: How to handle waiting times in development', 'url': 'https://simmering.dev/blog/waiting/', 'content': "Waiting times are a fact of life in data science. They can be reduced, but not eliminated. It's worth having a plan for how to spend the time to avoid losing"}, {'title': 'How to relax after intensive coding sessions? - Facebook', 'url': 'https://www.facebook.com/groups/pythontips/posts/1762006601160080/', 'content': "I've tried sleeping pills, which help for sound sleep, but I'm looking for better long-term ways to get quality sleep and turn off my work brain"}, {'title': 'How to manage anxiety before coding interviews? - Design Gurus', 'url': 'https://www.designgurus.io/answers/detail/how-to-manage-anxiety-before-coding-interviews', 'content': 'If you feel overwhelmed, use grounding techniques such as focusing on your breath, feeling the texture of your chair, or counting backward from'}, {'title': '10 Tips to Deal with Stress and Frustration in Programming', 'url': 'https://python.plainenglish.io/10-tips-to-deal-with-stress-and-frustration-in-programming-93b582482463', 'content': "Take a 5-minute break: make a coffee, take a walk, look out the window, etc. If the error persists, leave it for the next session. Don't let it"}, {'title': 'Overcoming Coding Anxiety Before Interviews - YouTube', 'url': 'https://www.youtube.com/watch?v=TpFrUMu9nPo', 'content': 'This video helps you overcome coding anxiety with practical tips, mindset shifts, and proven strategies to stay calm and confident during'}]}
+2026-03-06 21:19:23,771 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:20:46,596 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:20:53,242 - INFO - calling tool get_user_location
+toolargs: {}
+tool result:{'status': 'success', 'country': 'India', 'countryCode': 'IN', 'region': 'DL', 'regionName': 'National Capital Territory of Delhi', 'city': 'Delhi', 'zip': '110055', 'lat': 28.6542, 'lon': 77.2373, 'timezone': 'Asia/Kolkata', 'isp': 'Reliance Jio Infocomm Limited', 'org': 'Reliance Jio Infocomm Limited', 'as': 'AS55836 Reliance Jio Infocomm Limited', 'query': '49.36.182.166'}
+2026-03-06 21:20:57,022 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:21:03,035 - INFO - calling tool get_weather_from_coordinates
+toolargs: {'latitude': 28.6542, 'longitude': 77.2373}
+tool result:{'location': 'Dehli', 'temperature_c': 26.4, 'condition': 'Mist'}
+2026-03-06 21:21:06,581 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:21:54,577 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:22:10,692 - INFO - calling tool play_music
+toolargs: {'no_of_songs': 1, 'query': 'Diljit Dosanjh Born to Shine'}
+tool result:{
+  "active_device": "Rohan\u2019s MacBook Air",
+  "playing": null,
+  "queued": [
+    "Born to Shine - Diljit Dosanjh"
+  ]
+}
+2026-03-06 21:22:20,789 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:23:26,727 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:23:37,326 - INFO - calling tool play_music
+toolargs: {'no_of_songs': 1, 'query': 'Last Ride - Sidhu Moosewala'}
+tool result:{
+  "active_device": "Rohan\u2019s MacBook Air",
+  "playing": "The Last Ride - Sidhu Moose Wala",
+  "queued": []
+}
+2026-03-06 21:23:51,752 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:27:41,398 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:27:54,778 - INFO - calling tool play_music
+toolargs: {'query': 'Karan Aujla latest hits', 'no_of_songs': 4}
+tool result:{
+  "active_device": "Rohan's Nothing Phone (1)",
+  "playing": null,
+  "queued": [
+    "5-7 - Karan Aujla",
+    "I Really Do... - Karan Aujla",
+    "Wavy - Karan Aujla",
+    "For A Reason - Karan Aujla"
+  ]
+}
+2026-03-06 21:28:04,266 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:31:13,639 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:31:29,270 - INFO - calling tool play_music
+toolargs: {'query': 'Diljit Dosanjh hits', 'no_of_songs': 6}
+tool result:{
+  "active_device": "Rohan's Nothing Phone (1)",
+  "playing": null,
+  "queued": [
+    "G.O.A.T. - Diljit Dosanjh",
+    "Born to Shine - Diljit Dosanjh",
+    "Water - Diljit Dosanjh",
+    "Akh Laal Jatt Di - Diljit Dosanjh",
+    "Gunda - Diljit Dosanjh",
+    "Proper Patola (feat. Badshah) - Diljit Dosanjh"
+  ]
+}
+2026-03-06 21:31:39,128 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:39:02,646 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:39:20,328 - INFO - calling tool play_music
+toolargs: {'query': 'Trending TikTok viral hits 2024', 'no_of_songs': 6}
+tool result:{
+  "active_device": "Rohan's Nothing Phone (1)",
+  "playing": null,
+  "queued": [
+    "Matta (From \"The Greatest Of All Time\") - Yuvan Shankar Raja",
+    "100 Bars - Haaland936",
+    "Aura 10/10 (From \"Meesaya Murukku 2\") - Hiphop Tamizha",
+    "STIX - nobigdyl.",
+    "Violation - Hzino",
+    "Ima Do Me - Persawna"
+  ]
+}
+2026-03-06 21:39:31,857 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:43:44,925 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:45:45,341 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:46:03,179 - ERROR - HTTP Error for PUT to https://api.spotify.com/v1/me/player/play with Params: {} returned 404 due to Not found.
+2026-03-06 21:46:03,181 - INFO - calling tool play_music
+toolargs: {'query': 'Softly Karan Aujla', 'no_of_songs': 1}
+tool result:{
+  "error": " Failed to play/queue song. Error: http status: 404, code: -1 - https://api.spotify.com/v1/me/player/play:\n Not found., reason: None"
+}
+2026-03-06 21:46:08,231 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:46:23,121 - INFO - calling tool play_music
+toolargs: {'query': 'Softly Karan Aujla', 'no_of_songs': 1}
+tool result:{
+  "active_device": "Rohan's Nothing Phone (1)",
+  "playing": "Softly - Karan Aujla",
+  "queued": []
+}
+2026-03-06 21:46:26,803 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:47:13,223 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:47:21,760 - INFO - calling tool play_music
+toolargs: {'query': 'Diljit Dosanjh songs', 'no_of_songs': 3}
+tool result:{
+  "active_device": "Rohan's Nothing Phone (1)",
+  "playing": null,
+  "queued": [
+    "Born to Shine - Diljit Dosanjh",
+    "Lover - Diljit Dosanjh",
+    "Gunda - Diljit Dosanjh"
+  ]
+}
+2026-03-06 21:47:25,189 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:47:32,125 - INFO - calling tool play_music
+toolargs: {'query': 'Born to Shine - Diljit Dosanjh', 'no_of_songs': 1}
+tool result:{
+  "active_device": "Rohan's Nothing Phone (1)",
+  "playing": "Born to Shine - Diljit Dosanjh",
+  "queued": []
+}
+2026-03-06 21:47:35,729 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:47:45,934 - INFO - calling tool play_music
+toolargs: {'query': 'Karan Aujla songs', 'no_of_songs': 2}
+tool result:{
+  "active_device": "Rohan's Nothing Phone (1)",
+  "playing": null,
+  "queued": [
+    "For A Reason - Karan Aujla",
+    "Softly - Karan Aujla"
+  ]
+}
+2026-03-06 21:47:49,754 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:48:01,556 - INFO - calling tool play_music
+toolargs: {'query': 'Karan Aujla For A Reason', 'no_of_songs': 1}
+tool result:{
+  "active_device": "Rohan's Nothing Phone (1)",
+  "playing": "Softly - Karan Aujla",
+  "queued": []
+}
+2026-03-06 21:48:11,268 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:48:26,217 - INFO - calling tool play_music
+toolargs: {'query': 'Sidhu Moose Wala songs', 'no_of_songs': 2}
+tool result:{
+  "active_device": "Rohan's Nothing Phone (1)",
+  "playing": null,
+  "queued": [
+    "So High - Sidhu Moose Wala",
+    "Same Beef - Bohemia"
+  ]
+}
+2026-03-06 21:48:37,427 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:48:53,557 - INFO - calling tool play_music
+toolargs: {'query': 'Sidhu Moose Wala So High', 'no_of_songs': 1}
+tool result:{
+  "active_device": "Rohan's Nothing Phone (1)",
+  "playing": "So High - Sidhu Moose Wala",
+  "queued": []
+}
+2026-03-06 21:49:13,073 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:50:23,438 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:50:41,046 - INFO - calling tool play_music
+toolargs: {'query': 'Punjabi music Diljit Dosanjh Karan Aujla Sidhu Moose Wala Born to Shine', 'no_of_songs': 7}
+tool result:{
+  "error": " Failed to play/queue song. Error: local variable 'playing' referenced before assignment"
+}
+2026-03-06 21:50:43,865 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:50:58,746 - INFO - calling tool play_music
+toolargs: {'query': 'Diljit Dosanjh Tum Hi Ho', 'no_of_songs': 1}
+tool result:{
+  "active_device": "Rohan's Nothing Phone (1)",
+  "playing": "Tera Chera - Talwiinder",
+  "queued": [
+    "Born to Shine - Diljit Dosanjh",
+    "5-7 - Karan Aujla",
+    "So High - Sidhu Moose Wala",
+    "Outlaw - Sidhu Moose Wala",
+    "Devil - Sidhu Moose Wala",
+    "G.O.A.T. - Diljit Dosanjh",
+    "Hass Hass - Diljit Dosanjh"
+  ]
+}
+2026-03-06 21:51:04,248 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:55:02,121 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:55:13,860 - ERROR - Error: Tool 'update_memory' does not exist. Please use a valid tool.
+2026-03-06 21:55:16,568 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:55:27,677 - INFO - calling tool play_music
+toolargs: {'query': 'Born to Shine'}
+tool result:{
+  "active_device": "Rohan's Nothing Phone (1)",
+  "playing": "Born to Shine - Diljit Dosanjh",
+  "queued": []
+}
+2026-03-06 21:55:30,561 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:56:49,371 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:57:43,730 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:57:50,160 - INFO - calling tool play_music
+toolargs: {'query': 'popular songs'}
+tool result:{
+  "active_device": "Rohan's Nothing Phone (1)",
+  "playing": "POPULAR - Bir",
+  "queued": []
+}
+2026-03-06 21:57:53,846 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:57:58,925 - INFO - calling tool play_music
+toolargs: {'query': 'popular songs'}
+tool result:{
+  "active_device": "Rohan's Nothing Phone (1)",
+  "playing": "POPULAR - Bir",
+  "queued": []
+}
+2026-03-06 21:58:02,848 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:58:12,626 - INFO - calling tool play_music
+toolargs: {'query': 'Arijit Singh'}
+tool result:{
+  "active_device": "Rohan's Nothing Phone (1)",
+  "playing": "Har Kisi Ko (From \"Boss) - Arijit Singh",
+  "queued": []
+}
+2026-03-06 21:58:22,125 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:58:31,348 - INFO - calling tool play_music
+toolargs: {'query': 'Diljit Dosanjh'}
+tool result:{
+  "active_device": "Rohan's Nothing Phone (1)",
+  "playing": "Born to Shine - Diljit Dosanjh",
+  "queued": []
+}
+2026-03-06 21:58:40,843 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 21:58:53,212 - INFO - calling tool play_music
+toolargs: {'query': 'Punjabi'}
+tool result:{
+  "active_device": "Rohan's Nothing Phone (1)",
+  "playing": "California Love - Cheema Y",
+  "queued": []
+}
+2026-03-06 21:59:02,767 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"

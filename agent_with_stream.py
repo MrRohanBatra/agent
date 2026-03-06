@@ -1,4 +1,4 @@
-
+from datetime import datetime
 from pprint import pprint
 from langchain.tools import tool
 from langchain_ollama import ChatOllama
@@ -180,42 +180,6 @@ def get_messages_for_model():
 
     messages.extend(filtered_history)
     return messages
-def runAgent(userMessage: str):
-    global conversation_history
-    conversation_history.append(HumanMessage(content=userMessage))
-    
-    while True:
-        # Get filtered messages for model
-        messages_for_model = get_messages_for_model()
-        
-        # Invoke model
-        response = model.invoke(messages_for_model)
-        
-        # If no tool calls → final answer
-        if not response.tool_calls:
-            print(response.content)
-            # Add assistant response to history
-            conversation_history.append(AIMessage(content=response.content))
-            return response.content
-        
-        # Add assistant message with tool calls to history
-        conversation_history.append(response)
-        
-        # Process tool calls
-        for tool_call in response.tool_calls:
-            tool_name = tool_call["name"]
-            tool_args = tool_call["args"]
-            tool_call_id = tool_call["id"]
-            selected_tool = next(t for t in tools if t.name == tool_name)
-            tool_result = selected_tool.invoke(tool_args)
-            print(f"calling tool {tool_name}\ntoolargs: {tool_args}\ntool result:{tool_result}")
-            # Add tool result to history
-            conversation_history.append(
-                ToolMessage(
-                    content=str(tool_result),
-                    tool_call_id=tool_call_id
-                )
-            )
 def runAgentStream(userMessage: str):
     global conversation_history
     conversation_history.append(HumanMessage(content=userMessage))
@@ -279,7 +243,7 @@ if __name__ == "__main__":
                 break
             print("Agent: ",end="")
             output=runAgentStream(user_input)
-            # speak(output)
+
         else:
             loggedInUser=input("Enter Username ")
             memory=load_memory(loggedInUser)

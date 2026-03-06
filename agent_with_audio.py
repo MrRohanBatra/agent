@@ -1,4 +1,5 @@
 
+from datetime import datetime
 from pprint import pprint
 from langchain.tools import tool
 from langchain_ollama import ChatOllama
@@ -97,7 +98,7 @@ def update_memory(section: str, key: str, value: str) -> dict:
 def format_memory():
     return json.dumps(memory, indent=2)
 
-tools=TOOLS
+tools=TOOLS+[update_memory]
 SystemPrompt = """[CRITICAL SYSTEM DIRECTIVE: MEMORY FIRST]
 You are Qwen. Your PRIMARY and most important function is to remember user information using the `update_memory` tool. You must evaluate EVERY user message for new information before doing anything else.
 
@@ -272,14 +273,22 @@ if __name__ == "__main__":
     print("-" * 50)
     
     while True:
-        if(loggedInUser is not None):
-            user_input = input("You-> ")
-            if user_input.lower() == "exit":
-                print("bye 👋")
-                break
-            print("Agent: ",end="")
-            output=runAgentStream(user_input)
-            speak(output)
-        else:
-            loggedInUser=input("Enter Username ")
-            memory=load_memory(loggedInUser)
+        try:
+            if(loggedInUser is not None):
+                user_input = input("You-> ")
+                if user_input.lower() == "exit":
+                    print("bye 👋")
+                    break
+                print("Agent: ",end="")
+                output=runAgentStream(user_input)
+                speak(output)
+                with open("conversation.md", "a") as f:
+                    f.write(f"### {datetime.now()}\n\n")
+                    f.write(f"**You:** {user_input}\n\n")
+                    f.write(f"**Agent:**\n{output}\n\n")
+                    f.write("---\n\n")
+            else:
+                loggedInUser=input("Enter Username ")
+                memory=load_memory(loggedInUser)
+        except Exception as e:
+            print(f"error occured {str(e)}")        
