@@ -222,7 +222,7 @@ def runAgent(userMessage: str):
             tool_call_id = tool_call["id"]
             selected_tool = next(t for t in tools if t.name == tool_name)
             tool_result = selected_tool.invoke(tool_args)
-            
+            print(f"calling tool {tool_name}\ntoolargs: {tool_args}\ntool result:{tool_result}")
             # Add tool result to history
             conversation_history.append(
                 ToolMessage(
