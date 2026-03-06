@@ -3,8 +3,7 @@ from pprint import pprint
 from langchain.tools import tool
 from langchain_ollama import ChatOllama
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, ToolMessage
-from tools import *
-from music_tool import play_music
+from tools import TOOLS
 import json
 import os
 
@@ -91,27 +90,7 @@ def update_memory(section: str, key: str, value: str) -> dict:
 def format_memory():
     return json.dumps(memory, indent=2)
 
-tools = [
-    get_time_for_timezone,
-    get_user_location,
-    get_weather_from_coordinates,
-    web_search,
-    get_wikipedia_summary,
-    convert_currency,
-    calculate_expression,
-    scrape_website_text,
-    get_github_repo_info,
-    get_github_file_content,
-    search_code_in_repo,
-    list_repo_issues,
-    get_repo_file_structure,
-    read_file,
-    write_to_file,
-    list_directory,
-    update_memory,
-    play_music
-]
-
+tools=TOOLS
 SystemPrompt = """[CRITICAL SYSTEM DIRECTIVE: MEMORY FIRST]
 You are Qwen. Your PRIMARY and most important function is to remember user information using the `update_memory` tool. You must evaluate EVERY user message for new information before doing anything else.
 
