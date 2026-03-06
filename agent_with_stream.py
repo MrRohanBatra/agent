@@ -6,6 +6,7 @@ from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, Tool
 from tools import TOOLS
 import json
 import os
+from audio.speak import speak
 import logging
 logging.basicConfig(
     filename="agent.log",
@@ -277,7 +278,8 @@ if __name__ == "__main__":
                 print("bye 👋")
                 break
             print("Agent: ",end="")
-            runAgentStream(user_input)
+            output=runAgentStream(user_input)
+            # speak(output)
         else:
             loggedInUser=input("Enter Username ")
             memory=load_memory(loggedInUser)

@@ -138,3 +138,34 @@ tool result:{
   ]
 }
 2026-03-06 19:58:49,638 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 20:28:04,579 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 20:31:47,663 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 20:32:11,686 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 20:32:26,405 - INFO - calling tool play_music
+toolargs: {'no_of_songs': 5, 'query': 'Punjabi music'}
+tool result:{
+  "active_device": "Rohan\u2019s MacBook Air",
+  "playing": "8 ASLE - Sukha",
+  "queued": [
+    "Excuses - AP Dhillon",
+    "California Love - Cheema Y",
+    "Pooja & Patola - Namar Gill",
+    "Suniyan Suniyan - Juss"
+  ]
+}
+2026-03-06 20:32:29,715 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 20:34:25,244 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 20:34:29,361 - INFO - calling tool get_user_location
+toolargs: {}
+tool result:{'status': 'success', 'country': 'India', 'countryCode': 'IN', 'region': 'DL', 'regionName': 'National Capital Territory of Delhi', 'city': 'Delhi', 'zip': '110055', 'lat': 28.6542, 'lon': 77.2373, 'timezone': 'Asia/Kolkata', 'isp': 'Reliance Jio Infocomm Limited', 'org': 'Reliance Jio Infocomm Limited', 'as': 'AS55836 Reliance Jio Infocomm Limited', 'query': '49.36.182.166'}
+2026-03-06 20:34:32,492 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 20:34:36,155 - INFO - calling tool get_weather_from_coordinates
+toolargs: {'latitude': 28.6542, 'longitude': 77.2373}
+tool result:{'location': 'Dehli', 'temperature_c': 26.4, 'condition': 'Mist'}
+2026-03-06 20:34:39,428 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 20:39:12,738 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 20:39:35,958 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 20:39:44,048 - INFO - calling tool get_user_location
+toolargs: {}
+tool result:{'status': 'success', 'country': 'India', 'countryCode': 'IN', 'region': 'DL', 'regionName': 'National Capital Territory of Delhi', 'city': 'Delhi', 'zip': '110055', 'lat': 28.6542, 'lon': 77.2373, 'timezone': 'Asia/Kolkata', 'isp': 'Reliance Jio Infocomm Limited', 'org': 'Reliance Jio Infocomm Limited', 'as': 'AS55836 Reliance Jio Infocomm Limited', 'query': '49.36.182.166'}
+2026-03-06 20:39:47,610 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
