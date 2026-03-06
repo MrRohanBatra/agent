@@ -6,7 +6,14 @@ from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, Tool
 from tools import TOOLS
 import json
 import os
+import logging
 
+logging.basicConfig(
+    filename="agent.log",
+    filemode="a",
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    level=logging.INFO
+)
 MEMORY_FILE = "memory_new.json"
 MAX_CONVERSATION_HISTORY = 50
 loggedInUser:str=None
@@ -199,17 +206,20 @@ def runAgent(userMessage: str):
             tool_name = tool_call["name"]
             tool_args = tool_call["args"]
             tool_call_id = tool_call["id"]
-            selected_tool = next(t for t in tools if t.name == tool_name)
-            tool_result = selected_tool.invoke(tool_args)
-            print(f"calling tool {tool_name}\ntoolargs: {tool_args}\ntool result:{tool_result}")
-            # Add tool result to history
+            try:
+                selected_tool = next(t for t in tools if t.name == tool_name)
+                tool_result = selected_tool.invoke(tool_args)
+                logging.info(f"calling tool {tool_name}\ntoolargs: {tool_args}\ntool result:{tool_result}")
+                
+            except Exception as e:
+                tool_result = f"Error: Tool '{tool_name}' does not exist. Please use a valid tool."
+                logging.error(tool_result)
             conversation_history.append(
-                ToolMessage(
-                    content=str(tool_result),
-                    tool_call_id=tool_call_id
+                    ToolMessage(
+                        content=str(tool_result),
+                        tool_call_id=tool_call_id
+                    )
                 )
-            )
-
 if __name__ == "__main__":
     print("🤖 Agent initialized. Type 'exit' to quit.")
     print(f"📊 Keeping last {MAX_CONVERSATION_HISTORY} messages in history")

@@ -1,33 +1,58 @@
+
+from pprint import pprint
 from langchain.tools import tool
 from langchain_ollama import ChatOllama
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, ToolMessage
-from tools import *
-from music_tool import play_music
+from tools import TOOLS
 import json
 import os
-
-MEMORY_FILE = "memory.json"
+import logging
+logging.basicConfig(
+    filename="agent.log",
+    filemode="a",
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    level=logging.INFO
+)
+MEMORY_FILE = "memory_new.json"
 MAX_CONVERSATION_HISTORY = 50
 loggedInUser:str=None
-
-def load_memory():
-    if os.path.exists(MEMORY_FILE):
-        with open(MEMORY_FILE, "r") as f:
-            return json.load(f)
-    return {
-        "user_profile": {
-            "name": None,
-            "github_username": None,
-        },
+memory:dict=None
+conversation_history:list = []
+def load_memory(username: str) -> dict:
+    default_memory = {
+        "user_profile": {"name": None, "github_username": None},
         "preferences": {},
         "other": {}
     }
 
-def save_memory(memory_data):
-    with open(MEMORY_FILE, "w") as f:
-        json.dump(memory_data, f, indent=2)
+    if not os.path.exists(MEMORY_FILE):
+        return default_memory
 
-memory = load_memory()
+    try:
+        with open(MEMORY_FILE, "r") as f:
+            data = json.load(f)
+            return data.get("users", {}).get(username, default_memory)
+    except json.JSONDecodeError:
+        # print(f"Error: {MEMORY_FILE} is corrupted. Returning blank memory.")
+        return default_memory
+
+def save_memory(username: str, user_memory_data: dict):
+    """Safely updates a specific user's memory without destroying the file structure."""
+    if os.path.exists(MEMORY_FILE):
+        try:
+            with open(MEMORY_FILE, "r") as f:
+                full_data = json.load(f)
+        except json.JSONDecodeError:
+            full_data = {"users": {}}
+    else:
+        full_data = {"users": {}}
+
+    if "users" not in full_data or not isinstance(full_data["users"], dict):
+        full_data["users"] = {}
+    full_data["users"][username] = user_memory_data
+
+    with open(MEMORY_FILE, "w") as f:
+        json.dump(full_data, f, indent=2)
 
 @tool
 def update_memory(section: str, key: str, value: str) -> dict:
@@ -52,21 +77,26 @@ def update_memory(section: str, key: str, value: str) -> dict:
         dict: {"status": "stored", "section": section, "key": key}
     """
     global memory
-    if section not in memory:
-        return {"error": "Invalid memory section"}
-    memory[section][key] = value
-    save_memory(memory)
-    return {"status": "stored", "section": section, "key": key}
+    global loggedInUser
+    
+    if not loggedInUser:
+        return {"error": "No user is currently logged in."}
 
-tools=TOOLS
-model = ChatOllama(
-    model="qwen3.5:2b",
-    temperature=0.1
-).bind_tools(tools)
+    if section not in memory:
+        return {"error": f"Invalid memory section: {section}"}
+        
+    # Update the global memory dictionary in RAM
+    memory[section][key] = value
+    
+    # Save the updated memory to the JSON file safely
+    save_memory(loggedInUser, memory)
+    
+    return {"status": "stored", "section": section, "key": key}
 
 def format_memory():
     return json.dumps(memory, indent=2)
 
+tools=TOOLS
 SystemPrompt = """[CRITICAL SYSTEM DIRECTIVE: MEMORY FIRST]
 You are Qwen. Your PRIMARY and most important function is to remember user information using the `update_memory` tool. You must evaluate EVERY user message for new information before doing anything else.
 
@@ -83,7 +113,7 @@ Do NOT wait for specific keywords. If it describes the user or their world, SAVE
 When saving, use these broad categories:
 1. "user_profile": Any factual data about who the user is or what they do.
 2. "preferences": Any subjective choices, likes, dislikes, or working styles.
-3. "context": Temporary states, current tasks, or hardware/software environment.
+3. "other": Temporary states, current tasks, or hardware/software environment.
 
 ## TOOL USAGE PROTOCOL
 Available tools: {tools}
@@ -127,8 +157,13 @@ SYSTEM_MESSAGES = [
     SystemMessage(content=f"Persistent Memory:\n{format_memory()}")
 ]
 
-# Conversation history (starts empty)
-conversation_history = []
+
+model = ChatOllama(
+    model="qwen3.5:2b",
+    temperature=0.1
+).bind_tools(tools)
+
+
 def get_messages_for_model():
     global conversation_history
 
@@ -146,8 +181,6 @@ def get_messages_for_model():
     return messages
 def runAgent(userMessage: str):
     global conversation_history
-    
-    # Add user message to history
     conversation_history.append(HumanMessage(content=userMessage))
     
     while True:
@@ -174,7 +207,7 @@ def runAgent(userMessage: str):
             tool_call_id = tool_call["id"]
             selected_tool = next(t for t in tools if t.name == tool_name)
             tool_result = selected_tool.invoke(tool_args)
-            
+            print(f"calling tool {tool_name}\ntoolargs: {tool_args}\ntool result:{tool_result}")
             # Add tool result to history
             conversation_history.append(
                 ToolMessage(
@@ -182,15 +215,69 @@ def runAgent(userMessage: str):
                     tool_call_id=tool_call_id
                 )
             )
-
+def runAgentStream(userMessage: str):
+    global conversation_history
+    conversation_history.append(HumanMessage(content=userMessage))
+    
+    while True:
+        # Get filtered messages for model
+        messages_for_model = get_messages_for_model()
+        
+        # Stream model response
+        response = None
+        for chunk in model.stream(messages_for_model):
+            # Accumulate the chunks to build the final message and tool calls
+            if response is None:
+                response = chunk
+            else:
+                response += chunk
+            
+            # Print text content to the terminal as it streams in
+            if chunk.content:
+                print(chunk.content, end="", flush=True)
+        
+        # If no tool calls → final answer
+        if not response.tool_calls:
+            print() # Print a final newline after the stream finishes
+            # Add assistant response to history
+            conversation_history.append(AIMessage(content=response.content))
+            return response.content
+        
+        # Add assistant message with tool calls to history
+        conversation_history.append(response)
+        
+        # Process tool calls
+        for tool_call in response.tool_calls:
+            tool_name = tool_call["name"]
+            tool_args = tool_call["args"]
+            tool_call_id = tool_call["id"]
+            try:
+                selected_tool = next(t for t in tools if t.name == tool_name)
+                tool_result = selected_tool.invoke(tool_args)
+                logging.info(f"calling tool {tool_name}\ntoolargs: {tool_args}\ntool result:{tool_result}")
+                
+            except Exception as e:
+                tool_result = f"Error: Tool '{tool_name}' does not exist. Please use a valid tool."
+                logging.error(tool_result)
+            conversation_history.append(
+                    ToolMessage(
+                        content=str(tool_result),
+                        tool_call_id=tool_call_id
+                    )
+                )
 if __name__ == "__main__":
     print("🤖 Agent initialized. Type 'exit' to quit.")
     print(f"📊 Keeping last {MAX_CONVERSATION_HISTORY} messages in history")
     print("-" * 50)
     
     while True:
-        user_input = input("You-> ")
-        if user_input.lower() == "exit":
-            print("bye 👋")
-            break
-        runAgent(user_input)
+        if(loggedInUser is not None):
+            user_input = input("You-> ")
+            if user_input.lower() == "exit":
+                print("bye 👋")
+                break
+            print("Agent: ",end="")
+            runAgentStream(user_input)
+        else:
+            loggedInUser=input("Enter Username ")
+            memory=load_memory(loggedInUser)

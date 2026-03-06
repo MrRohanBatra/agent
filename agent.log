@@ -1,0 +1,140 @@
+2026-03-06 17:44:54,073 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 17:45:10,415 - INFO - 
+calling tool web_search
+toolargs: {'query': 'cloud kitchens near Lajpat Nagar New Delhi 110024'}
+tool result:{'answer': None, 'results': [{'title': 'The Cloud Kitchen in Lajpat Nagar Delhi | Order Food Online - Swiggy', 'url': 'https://www.swiggy.com/city/delhi/the-cloud-kitchen-gidwani-marg-lajpat-nagar-rest760576', 'content': 'The Cloud Kitchen. (Outlet:Lajpat Nagar). 5/31, Dr Choturam Ram Gidwani Marg, Vikram Vihar, Lajpat Nagar IV, Lajpat Nagar, New Delhi, Delhi 110024, India. For'}, {'title': 'Lahori Gali - Authentic Mughlai and North Indian cuisine in Lajpat ...', 'url': 'http://www.lahorigali.com/', 'content': 'O-16 Lajpat Nagar 2 Ground floor 110024 New Delhi ... Welcome to Lahori Gali, your go-to Cloud Kitchen in Lajpat Nagar, New Delhi, one of the best cloud kitchen'}, {'title': 'Cloud Cusine in Lajpat Nagar Delhi | Order Food Online - Swiggy', 'url': 'https://www.swiggy.com/city/delhi/cloud-cusine-okhla-defence-colony-lajpat-nagar-rest701676', 'content': 'Cloud Cusine. (Outlet:Lajpat Nagar). D-166, SHOP ON GROUND FLOOR, LAJPAT NAGAR-1, OKHLA, DEFENCE COLONY, South East, Delhi - 110024. For better experience'}, {'title': '@naoasiantable is not just delivering on @zomato or ... - Instagram', 'url': 'https://www.instagram.com/reel/DVTCj0xjnRe/', 'content': "... cloud kitchen” This one's opened at Lajpat Nagar-1, South Delhi 110024, India My order consisted of - = Self curated stone bowls •Udon"}, {'title': 'Cindrella Cloud Kitchen, Lajpat Nagar 1, New Delhi | Zomato', 'url': 'https://www.zomato.com/ncr/cindrella-cloud-kitchen-lajpat-nagar-1-new-delhi', 'content': 'Cindrella Cloud Kitchen, Sandwich, Street Food, Beverages, D11, 2nd Floor, Lajpat Nagar 1, New Delhi, Address'}]}
+2026-03-06 17:45:14,543 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 17:48:36,426 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 17:49:10,856 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 17:49:27,117 - INFO - 
+calling tool web_search
+toolargs: {'query': 'cloud kitchens near Lajpat Nagar New Delhi Delhi'}
+tool result:{'answer': None, 'results': [{'title': 'Lahori Gali - Authentic Mughlai and North Indian cuisine in Lajpat ...', 'url': 'http://www.lahorigali.com/', 'content': '#### Contact Info. * O-16 Lajpat Nagar 2 Ground floor 110024 New Delhi. * Contact for more information  +91-96 54 14 2043. We bring the best Indian flavours straight to your doorstep, offering a delightful array of traditional Indian food that will fascinate your taste buds. We are eagerly waiting for your first order so that we represent a rich and authentic taste with the best flavour of the finest Indian Spice Cuisine. ## Delivery Partners. Welcome to **Lahori Gali**, your go-to **Cloud Kitchen in Lajpat Nagar, New Delhi**, one of the best cloud kitchen services. Whether you are craving the rich, aromatic spices of **Mughlai food** or the vibrant, **Indian spice cuisine in Lajpat Nagar, New Delhi**, flavours of **North Indian cuisine, Lahori Gali** is here to satisfy your culinary desires. It is a gateway to the vibrant Indian food of Lajpat Nagar, New Delhi, offering a taste of tradition and a slice of cultural heritage. ## fast delivery.'}, {'title': 'Cloud Kitchen, Lajpat Nagar 2, New Delhi - Zomato', 'url': 'https://www.zomato.com/ncr/cloud-kitchen-lajpat-nagar-2-new-delhi', 'content': "# Cloud Kitchen. Block 7, Pratap Camp, Lajpat Nagar 2, New Delhi. ## Overview. HELP US MAKE ZOMATO BETTER. #### Report an error in this listing. Help us make Zomato more updated and relevant for everyone. #### Claim this listing. Claim this listing to get access to a free management and analytics dashboard, where you can edit information, track your page views, and more. Block 7, Pratap Camp, Lajpat Nagar 2, New Delhi. ###### Related to Cloud Kitchen, Lajpat Nagar 2. Restaurants in New Delhi, New Delhi Restaurants, Lajpat Nagar 2 restaurants, Best Lajpat Nagar 2 restaurants, South Delhi restaurants, New Year Parties in Delhi NCR, Christmas' Special in Delhi NCR. ###### Restaurants around Lajpat Nagar 2. Lajpat Nagar 3 restaurants, Lajpat Nagar 4 restaurants, Lajpat Nagar 1 restaurants, Amar Colony restaurants. ###### Frequent searches leading to this page. cloud kitchen menu, cloud kitchen lajpat nagar 2 menu, cloud kitchen new delhi, cloud kitchen new delhi menu, cloud kitchen restaurant."}, {'title': "Aditii'S Cloud Kitchen in Lajpat Nagar Delhi | Order Food Online", 'url': 'https://www.swiggy.com/restaurants/aditiis-cloud-kitchen-jangpura-lajpat-nagar-delhi-957372', 'content': "Aditii'S Cloud Kitchen. (Outlet:Lajpat Nagar). Shop No : 15/2 , Floor : First , Verma's , Jangpura, Bhogal, New Delhi, Delhi 110014, India 110014. For better"}, {'title': 'Best Cloud Kitchen Restaurants in Lajpat Nagar, New Delhi - Magicpin', 'url': 'https://magicpin.in/india/New-Delhi/Lajpat-Nagar/Restaurant/Cloud-Kitchen/?srsltid=AfmBOor-GnSZ0hzFaMiymTr61v2WhfASpupZ5jPD8pHzcE04huRd3Ip1', 'content': 'magicpin logo - discover deals,discounts and vouchers around you. # Best Cloud Kitchen Restaurants in Lajpat Nagar, New Delhi Look for Best Cloud Kitchen Restaurants in New Delhi. Mealful Wraps - Meals In A Wrap. ## Mealful Wraps - Meals In A Wrap. Delivery Only, ₹500 for two. ## Hoi Foods. Delivery Only, ₹500 for two. ## Khichdi Experiment. Delivery Only, ₹400 for two. ## Hoi Foods. Casual Dining, ₹500 for two. ## Yours Truly Butter Chicken. Delivery Only, ₹400 for two. ## Hoi Foods. Delivery Only, ₹400 for two. ## Karate Kitchen. Casual Dining, ₹500 for two. ## Soroush Biriyani. Delivery Only, ₹300 for two. ## Hoi Foods. Casual Dining, ₹500 for two. ## Karate Kitchen. Delivery Only, ₹900 for two. ## Hoi Foods. Delivery Only, ₹500 for two. ## Hoi Foods. Casual Dining, ₹500 for two. ## Hoi Foods. Casual Dining, ₹500 for two. Name of the Company: SAMAST TECHNOLOGIES PRIVATE LIMITED.'}, {'title': 'Cindrella Cloud Kitchen, Lajpat Nagar 1, New Delhi | Zomato', 'url': 'https://www.zomato.com/ncr/cindrella-cloud-kitchen-lajpat-nagar-1-new-delhi', 'content': "# Cindrella Cloud Kitchen. D11, 2nd Floor, Lajpat Nagar 1, New Delhi. HELP US MAKE ZOMATO BETTER. #### Report an error in this listing. Help us make Zomato more updated and relevant for everyone. #### Claim this listing. Claim this listing to get access to a free management and analytics dashboard, where you can edit information, track your page views, and more. D11, 2nd Floor, Lajpat Nagar 1, New Delhi. ###### Related to Cindrella Cloud Kitchen, Lajpat Nagar 1. Restaurants in New Delhi, New Delhi Restaurants, Lajpat Nagar 1 restaurants, Best Lajpat Nagar 1 restaurants, South Delhi restaurants, New Year Parties in Delhi NCR, Christmas' Special in Delhi NCR. ###### Restaurants around Lajpat Nagar 1. Lajpat Nagar 2 restaurants, Jangpura restaurants, Lajpat Nagar 3 restaurants, Defence Colony restaurants. ###### Frequent searches leading to this page. cindrella cloud kitchen menu, cindrella cloud kitchen lajpat nagar 1 menu, cindrella cloud kitchen new delhi, cindrella cloud kitchen new delhi menu, cindrella cloud kitchen restaurant."}]}
+2026-03-06 17:49:36,947 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 17:50:26,227 - INFO - 
+calling tool web_search
+toolargs: {'query': 'popular songs to play music 2024 2025'}
+tool result:{'answer': None, 'results': [{'title': 'The 100 Best Songs of 2025 - Rolling Stone', 'url': 'https://www.rollingstone.com/music/music-lists/best-songs-of-2025-1235468614/', 'content': 'She’s ready to go to Paris and Malibu and “throw a party like McCartney with some help from my friends.” It’s a sparkling, disco-inflected pop song from a star in her sparkling pop-song era.—*Brittany Spanos*. On the LP’s standout moment, “Sugar in the Tank,” the guitars vault and jangle, and Baker sings about a longing so intense it’s dangerous — “I love you deadly as a heart attack/I love you halfway in a paper sack.” They nail the chorus like they know they’ve got a classic on their hands. Big Thief marry the commonplace and the cosmic like a 2020s version of the Grateful Dead.When Adrianne Lenker performed the lead track on their new *Double Infinity* a year before the album’s release, it was an acoustic tune in the vein of Neil Young’s “Helpless.” The band turned it into a gorgeous psychedelic swirl, perfect for Lenker’s lyrics, which begin with a missed flight and spiral into a road-trip meditation on memory, time, family, aging, and freedom.—*J.D.*.'}, {'title': 'The 25 Best Songs Of 2025 - NPR', 'url': 'https://www.npr.org/2025/12/09/nx-s1-5616663/the-25-best-songs-of-2025', 'content': 'NPR Music\'s list of the best 25 songs represent the upper echelon of our staff and stations\' favorite discoveries from the past 12 months. For those who want to dive deeper, please check out our complete list of the 125 Best Songs of 2025, which was handpicked by more than 60 writers and DJs from around the NPR Music Network of public radio stations. It\'s a deep and expansive examination of true romance, but it wouldn\'t be a Lucy Dacus song if it didn\'t have at least a *little* bit of ambivalence: "How lucky are we," she sings, "to have so much to lose?" —*Stephen Thompson, NPR*. But after listening to HAIM\'s "Relationships," I am also that alien, wondering what the word even means, what the thing even means, what the real deal is with relationships as the song jerks forward and back, questions itself then speeds forward, just like, well, a relationship. The French artist oklou\'s album *choke enough* is full of eerie, nostalgic electronica, but its last song, "blade bird," is a grounded outlier and also its best.'}, {'title': 'The 100 Best Songs of 2025 | Pitchfork', 'url': 'https://pitchfork.com/features/lists-and-guides/best-songs-2025/', 'content': 'Here is where “I Ain’t Comin’ Back,” Morgan Wallen and Post Malone’s second blame-shifting duet, goes from a perfectly serviceable country radio hit to a great song: “There’s a lotta reasons I ain’t Jesus, but the main one is that I ain’t comin’ back.” It’s a damn near perfect line, one that’s funny and sounds like it was written and sung with a big ol’ shit-eatin’ grin. On “Bounce House,” the bubbly lead single from her debut album *Switcheroo*, the Los Angeles–based singer and producer born Angel Abaya crafts a spinning carousel with appetites bounding freely between a “Tommy” and a “Sally.” “I’ve been hoppin’ on the honest train,” she sings sweetly to the former, “Don’t love you less just because I got off without ya.” By the time the song ends in a chatter of giggly, excited voices engaging Abaya in a call-and-response about “drumming like a battery bunny,” it’s impossible to stop the giant smile from forming on your face.'}, {'title': 'Top 10 Best Songs of 2025 - YouTube', 'url': 'https://www.youtube.com/watch?v=PwVJDq6u2gA', 'content': "Top 10 Best Songs of 2025\nMsMojo\n5740000 subscribers\n4167 likes\n335653 views\n6 Dec 2025\nTurn up the volume—these 2025 anthems owned the charts, the discourse, and our hearts. Join us as we spin through the year’s most unforgettable tracks, from “Golden” and “Abracadabra” to “Manchild,” “The Fate of Ophelia,” “Ordinary,” and “Berghain.” Expect massive hooks, daring genre mashups, and lyrics that cut deep. Which song ruled your 2025 playlist? Sound off in the comments! Plus a few surprises you didn’t see coming along the way. We also spotlight Chappell Roan’s aching “The Subway,” Raye’s brassy “Where Is My Husband!,” and Bad Bunny’s nostalgic “DtMF.” From Lorde’s euphoric “What Was That” to a spellbinding dark-pop return by Lady Gaga—and a breakout K-pop moment from Huntr/x—these songs defined the year.\r\n\r\nFOLLOW all our socials for more content here: https://linktr.ee/msmojo\r\n\r\nDon't forget to play our Live Trivia games at 3pm EST for a chance to win cash! The faster you answer, the more points you get!: https://www.watchmojo.com/play\r\n\r\nMsMojo is a leading producer of reference online video content of Top 10 Lists, Origins, Biographies, Commentary and more on Pop Culture, Celebrity, Movies, Music, TV, Film, Video Games, Politics, News, Comics, Superheroes. Your trusted authority on ranking Pop Culture.\r\n\r\nBadBunny, LadyGaga, TaylorSwift, SabrinaCarpenter, ChappellRoan, Rosalia, Raye, Lorde, HuntrX, Golden, Abracadabra, DTMF\n595 comments\n"}, {'title': 'Global Top 50 | 2025 Hits - Apple Music', 'url': 'https://music.apple.com/us/playlist/global-top-50-2025-hits/pl.4ce56ad1659d490cb125ed4fd9bfb6c3', 'content': "# Global Top 50 | 2025 Hits. Packed with all the best songs of 2025. Today's most streamed tracks and top songs - worldwide! Pop, Dance, Hip-Hop and Latin hot hits! 51 songs, 2 hours 52 minutes. * HITS 2026 - Today's Hits. HITS 2026 - Today's Hits. * HOUSE MUSIC 2026 | TOP 100 DANCE HITS. HOUSE MUSIC 2026 | TOP 100 DANCE HITS. * TikTok Songs 2026 | Viral Internet Hits | Trending Songs 2026. TikTok Songs 2026 | Viral Internet Hits | Trending Songs 2026. * Today's Top Country Music 2026 ☆ Top 50 Country Hits. Today's Top Country Music 2026 ☆ Top 50 Country Hits. * Rap Songs 2026 | New Hip Hop Hits🔥💯. Rap Songs 2026 | New Hip Hop Hits🔥💯. * Yacht Rock • 70s & 80s Soft Rock Classics. Yacht Rock • 70s & 80s Soft Rock Classics."}]}
+2026-03-06 17:50:38,231 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 19:34:02,225 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 19:34:10,187 - ERROR - HTTP Error for PUT to https://api.spotify.com/v1/me/player/play with Params: {} returned 404 due to Player command failed: No active device found
+2026-03-06 19:34:10,188 - INFO - 
+calling tool play_music
+toolargs: {'query': 'Punjabi songs Bollywood', 'no_of_songs': 5}
+tool result:{
+  "error": " Failed to play/queue song. Error: http status: 404, code: -1 - https://api.spotify.com/v1/me/player/play:\n Player command failed: No active device found, reason: NO_ACTIVE_DEVICE"
+}
+2026-03-06 19:34:13,864 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 19:35:19,780 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 19:38:50,151 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 19:39:01,299 - INFO - calling tool play_music
+toolargs: {'query': 'Punjabi Bollywood songs', 'no_of_songs': 8}
+tool result:{
+  "playing": "Daru Badnaam - Param Singh",
+  "queued": [
+    "Naina (From \"Crew\") - Diljit Dosanjh",
+    "Punjabi Wedding Song - Vishal-Shekhar",
+    "8 Parche - Baani Sandhu",
+    "Kya Baat Ay - Harrdy Sandhu",
+    "PERFECT (From \"Sunny Sanskari Ki Tulsi Kumari\") - Guru Randhawa",
+    "1997 - BAGI MUNDA",
+    "International - Karma"
+  ]
+}
+2026-03-06 19:39:04,767 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 19:48:51,197 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 19:49:05,146 - INFO - calling tool play_music
+toolargs: {'query': 'Punjabi Bollywood music', 'no_of_songs': 7}
+tool result:{
+  "playing": null,
+  "queued": [
+    "Brown Munde - AP Dhillon",
+    "Naina (From \"Crew\") - Diljit Dosanjh",
+    "PERFECT (From \"Sunny Sanskari Ki Tulsi Kumari\") - Guru Randhawa",
+    "Naina (From \"Crew\") - Diljit Dosanjh",
+    "Libaas - Kaka",
+    "Libaas - Kaka",
+    "Issey Kehte Hain Hip Hop (From \"Issey Kehte Hain Hip Hop\") - Yo Yo Honey Singh"
+  ]
+}
+2026-03-06 19:49:08,382 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 19:52:25,927 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 19:52:39,784 - INFO - calling tool play_music
+toolargs: {'query': 'Punjabi music', 'no_of_songs': 5}
+tool result:{
+  "error": " Failed to play/queue song. Error: 'method' object is not subscriptable"
+}
+2026-03-06 19:52:42,785 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 19:52:49,163 - INFO - calling tool play_music
+toolargs: {'query': 'Diljit Dosanjh', 'no_of_songs': 3}
+tool result:{
+  "error": " Failed to play/queue song. Error: 'method' object is not subscriptable"
+}
+2026-03-06 19:52:52,205 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 19:52:56,682 - INFO - calling tool play_music
+toolargs: {'query': 'Born to Shine', 'no_of_songs': 1}
+tool result:{
+  "error": " Failed to play/queue song. Error: 'method' object is not subscriptable"
+}
+2026-03-06 19:53:00,057 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 19:53:28,091 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 19:53:36,673 - INFO - calling tool play_music
+toolargs: {'query': 'dhurandar movie songs', 'no_of_songs': 5}
+tool result:{
+  "playing": null,
+  "queued": [
+    "Shararat (From \"Dhurandhar\") - Shashwat Sachdev",
+    "Gehra Hua (From \"Dhurandhar\") - Shashwat Sachdev",
+    "Dhurandhar - Title Track - Shashwat Sachdev",
+    "NO LOVE - 2Scratch",
+    "What I Would Say - Lloyiso"
+  ]
+}
+2026-03-06 19:53:40,168 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 19:56:43,387 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 19:56:52,942 - INFO - calling tool play_music
+toolargs: {'no_of_songs': 10, 'query': 'trending songs'}
+tool result:{
+  "active_device": {
+    "id": "59342fd6bcb4bd31b479ccb9787d5dff5758b3cb",
+    "is_active": true,
+    "is_private_session": false,
+    "is_restricted": false,
+    "name": "Rohan\u2019s MacBook Air",
+    "supports_volume": true,
+    "type": "Computer",
+    "volume_percent": 100
+  },
+  "playing": null,
+  "queued": [
+    "Dil Lagana Mana Tha - Krish Mondal",
+    "AZUL - Guru Randhawa",
+    "Sahiba - Aditya Rikhari",
+    "Trending Nakhra - Amrit Maan",
+    "Zaroor - Aparshakti Khurana",
+    "Saiyaara (From \"Saiyaara\") - Tanishk Bagchi",
+    "Rani Teri Ek Jhalak - bargad Trending Version - sufr",
+    "Aasa Kooda - From \"Think Indie\" - Sai Abhyankkar",
+    "Vaaroon Trending Version - Anand Bhaskar",
+    "Main Tera Main Tera - Pritam"
+  ]
+}
+2026-03-06 19:56:56,794 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 19:58:33,637 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 19:58:46,424 - INFO - calling tool play_music
+toolargs: {'no_of_songs': 8, 'query': 'Punjabi Bollywood songs'}
+tool result:{
+  "active_device": "Rohan\u2019s MacBook Air",
+  "playing": null,
+  "queued": [
+    "Daru Badnaam - Param Singh",
+    "Morni Banke (From \"Badhaai Ho\") - Guru Randhawa",
+    "Naina (From \"Crew\") - Diljit Dosanjh",
+    "8 Parche - Baani Sandhu",
+    "Kya Baat Ay - Harrdy Sandhu",
+    "PERFECT (From \"Sunny Sanskari Ki Tulsi Kumari\") - Guru Randhawa",
+    "1997 - BAGI MUNDA",
+    "International - Karma"
+  ]
+}
+2026-03-06 19:58:49,638 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"

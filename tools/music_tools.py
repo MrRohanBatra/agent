@@ -1,7 +1,10 @@
+from pprint import pprint
 import random
 from langchain.tools import tool
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+import json
+import logging
 
 client_id = "2e5953acc6bd47f3a0062b115afbd521"
 client_secret = "09b641d37621468c85eece61fc2e1976"
@@ -33,8 +36,9 @@ def autoplay_song(query: str, no_of_songs: int = 1):
     try:
         current_playback = sp.current_playback()
 
-        responses = []
-
+        # responses:list[dict] = []
+        playing:str=None
+        queued:list[str]=[]
         for i, track in enumerate(tracks):
             track_name = track["name"]
             artist_name = track["artists"][0]["name"]
@@ -42,15 +46,26 @@ def autoplay_song(query: str, no_of_songs: int = 1):
 
             if i == 0 and not (current_playback and current_playback.get("is_playing")):
                 sp.start_playback(uris=[track_uri])
-                responses.append(f"Playing: {track_name} - {artist_name}")
+                playing=f"{track_name} - {artist_name}"
             else:
                 sp.add_to_queue(track_uri)
-                responses.append(f"Queued: {track_name} - {artist_name}")
-
-        return "\n".join(responses)
+                queued.append(f"{track_name} - {artist_name}")
+            devices=sp.devices()
+            active_device:str=None
+            for device in devices["devices"]:
+                if device["is_active"]:
+                    active_device = device
+                    break
+        return json.dumps({
+            "active_device":active_device.get("name",""),
+            "playing":playing,
+            "queued":queued
+        },indent=2)
 
     except Exception as e:
-        return f"❌ Failed to play/queue song. Error: {str(e)}"
+        return json.dumps({
+            "error":f" Failed to play/queue song. Error: {str(e)}"
+        },indent=2)
 
 @tool
 def play_music(query: str, no_of_songs: int = 1) -> str:
@@ -78,7 +93,7 @@ def play_music(query: str, no_of_songs: int = 1) -> str:
         no_of_songs (int): Number of songs to fetch and play/queue.
 
     Returns:
-        str: Confirmation showing which songs were played or queued.
+        json: Confirmation showing which songs were played or queued and shows error if there is any error.
     """
 
     return autoplay_song(query, no_of_songs)
