@@ -95,3 +95,4 @@ yt-dlp>=2026.3.3
 zstandard>=0.25.0
 tavily-python
 piper-tts
+sounddevice
