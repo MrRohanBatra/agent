@@ -5,6 +5,7 @@ from .web_tools import *
 from .github_tools import *
 from .file_tools import *
 from .music_tools import play_music
+from .sheel_tool import *
 
 TOOLS=[
     read_file,
@@ -20,4 +21,5 @@ TOOLS=[
     get_weather_from_coordinates,
     play_music,
     web_search,
+    shell
 ]
