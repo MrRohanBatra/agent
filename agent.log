@@ -479,3 +479,219 @@ toolargs: {'command': 'amplify 80'}
 tool result:Error:
 /bin/sh: amplify: command not found
 2026-03-08 17:05:01,606 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:16:21,070 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:21:40,577 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:21:44,851 - INFO - calling tool list_directory
+toolargs: {'directory': '.'}
+tool result:{'directory': '.', 'files': ['try.py', 'agent_with_stream.py', 'tools', 'index.html', '.DS_Store', 'requirements.txt', 'memory.json', 'music_tool.py', '__pycache__', 'agent_with_audio.py', 'memory_new.json', 'tools_old.py', 'audio', '.gitignore', 'report.txt', '.venv', 'agent.py', '.git', 'agent.log', 'spotify_token.json', 'conversation.md', '.idea', 'music_player.py']}
+2026-03-09 10:21:48,540 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:22:26,858 - ERROR - Error: Tool 'write_file' does not exist. Please use a valid tool.
+2026-03-09 10:22:35,727 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:22:57,265 - INFO - calling tool update_memory
+toolargs: {'section': 'other', 'key': 'current_location', 'value': 'Lajpat Nagar, New Delhi, Delhi, Pincode: 110024'}
+tool result:{'status': 'stored', 'section': 'other', 'key': 'current_location'}
+2026-03-09 10:23:06,437 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:24:30,432 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:24:47,536 - INFO - calling tool shell
+toolargs: {'command': 'cat > gui.py << \'EOF\'\nimport tkinter as tk\nfrom tkinter import messagebox\n\ndef main():\n    root = tk.Tk()\n    root.title("Hello World")\n    \n    # Create a label to display the message\n    label = tk.Label(root, text="Hello World", font=("Arial", 24))\n    label.pack(pady=50)\n    \n    # Add a button to restart\n    def on_button_click():\n        root.destroy()\n    \n    btn = tk.Button(root, text="Restart", command=on_button_click)\n    btn.pack(pady=10)\n    \n    root.mainloop()\n\nif __name__ == "__main__":\n    main()\nEOF'}
+tool result:Command executed.
+2026-03-09 10:24:56,947 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:26:40,446 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:26:43,292 - INFO - calling tool shell
+toolargs: {'command': 'python gui.py'}
+tool result:Error:
+Traceback (most recent call last):
+  File "/Users/rohanbatra/Desktop/AgentAI/gui.py", line 1, in <module>
+    import tkinter as tk
+  File "/opt/homebrew/Cellar/python@3.10/3.10.20/Frameworks/Python.framework/Versions/3.10/lib/python3.10/tkinter/__init__.py", line 37, in <module>
+    import _tkinter # If this fails your Python may not be configured for Tk
+ModuleNotFoundError: No module named '_tkinter'
+2026-03-09 10:26:47,121 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:29:06,552 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:29:18,298 - INFO - calling tool update_memory
+toolargs: {'section': 'user_profile', 'key': 'github_username', 'value': 'mrrohanbatra'}
+tool result:{'status': 'stored', 'section': 'user_profile', 'key': 'github_username'}
+2026-03-09 10:29:27,580 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:29:36,988 - INFO - calling tool list_directory
+toolargs: {'directory': '.'}
+tool result:{'directory': '.', 'files': ['try.py', 'agent_with_stream.py', 'tools', 'index.html', '.DS_Store', 'requirements.txt', 'memory.json', 'music_tool.py', '__pycache__', 'agent_with_audio.py', 'memory_new.json', 'tools_old.py', 'audio', '.gitignore', 'report.txt', '.venv', 'agent.py', 'agent_file', '.git', 'agent.log', 'spotify_token.json', 'gui.py', 'conversation.md', '.idea', 'music_player.py']}
+2026-03-09 10:29:46,399 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:29:57,832 - INFO - calling tool update_memory
+toolargs: {'section': 'user_profile', 'key': 'github_username', 'value': 'mrrohanbatra'}
+tool result:{'status': 'stored', 'section': 'user_profile', 'key': 'github_username'}
+2026-03-09 10:30:07,373 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:31:12,796 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:31:44,691 - INFO - calling tool shell
+toolargs: {'command': 'top'}
+tool result:Execution failed: Command 'top' timed out after 20 seconds
+2026-03-09 10:31:54,317 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:32:02,066 - INFO - calling tool shell
+toolargs: {'command': 'ps aux --no-headers | head -20'}
+tool result:Error:
+ps: illegal option -- -
+usage: ps [-AaCcEefhjlMmrSTvwXx] [-O fmt | -o fmt] [-G gid[,gid...]]
+          [-u]
+          [-p pid[,pid...]] [-t tty[,tty...]] [-U user[,user...]]
+       ps [-L]
+2026-03-09 10:32:11,667 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:32:19,014 - INFO - calling tool shell
+toolargs: {'command': 'free -h'}
+tool result:Error:
+/bin/sh: free: command not found
+2026-03-09 10:32:28,701 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:33:56,109 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:34:23,477 - INFO - calling tool shell
+toolargs: {'command': 'top'}
+tool result:Execution failed: Command 'top' timed out after 20 seconds
+2026-03-09 10:34:33,147 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:34:37,344 - INFO - calling tool shell
+toolargs: {'command': 'cat /proc/stat | grep -E "cpu|user|system"'}
+tool result:Error:
+cat: /proc/stat: No such file or directory
+2026-03-09 10:34:41,596 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:34:45,107 - INFO - calling tool shell
+toolargs: {'command': 'sysctl -n hw.ncpu'}
+tool result:8
+2026-03-09 10:34:49,479 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:36:41,747 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:37:49,224 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:40:40,742 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:41:54,415 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:42:08,406 - INFO - calling tool shell
+toolargs: {'command': 'xattr -l /Applications'}
+tool result:Command executed.
+2026-03-09 10:42:17,796 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:42:26,241 - INFO - calling tool shell
+toolargs: {'command': 'ls -la /Applications | grep -v "^total"'}
+tool result:drwxrwxr-x  49 root        admin   1568  8 Mar 19:57 .
+drwxr-xr-x  22 root        wheel    704  2 Mar 17:07 ..
+-rw-r--r--@  1 rohanbatra  admin  14340  8 Mar 19:47 .DS_Store
+-rw-r--r--   1 root        wheel      0  2 Mar 17:07 .localized
+drwxr-xr-x@  3 rohanbatra  admin     96 20 Feb 14:21 Android Studio.app
+drwxr-xr-x@  3 root        wheel     96 20 Nov 00:22 Apple Configurator.app
+drwxr-xr-x@  3 root        wheel     96  8 Oct 16:03 Arattai.app
+drwxr-xr-x@  3 rohanbatra  admin     96  9 Apr  2025 Arduino IDE.app
+drwxr-xr-x@  3 root        wheel     96 25 Sep 15:37 Blackmagic Disk Speed Test.app
+drwxr-xr-x@  3 rohanbatra  admin     96 24 Nov 13:36 boringNotch.app
+drwxr-xr-x@  3 rohanbatra  admin     96 27 Feb 12:00 ChatGPT.app
+drwxr-xr-x   3 root        admin     96  6 Mar 21:01 Chrome Remote Desktop Host Uninstaller.app
+drwxr-xr-x@  3 rohanbatra  admin     96  4 Sep  2018 Client Authentication Agent.app
+drwxr-xr-x@  4 root        wheel    128  1 Nov 15:03 ezyLiv.app
+drwxr-xr-x@  3 root        wheel     96  6 Mar 14:25 Google Chrome.app
+drwxr-xr-x@  3 root        wheel     96  5 Aug  2025 Google Docs.app
+drwxr-xr-x@  3 root        wheel     96  5 Aug  2025 Google Sheets.app
+drwxr-xr-x@  3 root        wheel     96  5 Aug  2025 Google Slides.app
+drwxr-xr-x@  3 rohanbatra  admin     96  3 Feb 12:51 HackerRank.app
+drwxr-xr-x@  4 root        wheel    128  9 Feb 18:54 HeyMelody.app
+drwxr-xr-x@  3 root        wheel     96 22 Feb 16:26 HP Smart.app
+drwxrwxr-x@  3 root        wheel     96 14 Jan 15:43 Microsoft Excel.app
+drwxrwxr-x@  3 root        wheel     96 14 Jan 15:44 Microsoft PowerPoint.app
+drwxrwxr-x@  3 root        wheel     96 14 Jan 15:45 Microsoft Word.app
+drwxr-xr-x@  3 rohanbatra  staff     96 25 Feb 16:08 MongoDB Compass.app
+drwxr-xr-x@  3 rohanbatra  admin     96 11 Jul  2025 MySQLWorkbench.app
+drwxr-xr-x@  3 rohanbatra  admin     96  8 Mar 13:51 Ollama.app
+drwxr-xr-x@  3 rohanbatra  admin     96  4 Jul  2024 OpenMTP.app
+drwxr-xr-x   4 root        wheel    128 23 Feb 21:29 OpenVPN Connect
+lrwxr-xr-x   1 root        admin     49 23 Feb 21:29 OpenVPN Connect.app -> /Applications/OpenVPN Connect/OpenVPN Connect.app
+drwxr-xr-x@  4 rohanbatra  admin    128  9 Dec  2021 peazip.app
+drwxr-xr-x@  3 rohanbatra  admin     96 19 Feb 18:32 PyCharm.app
+drwxr-xr-x@ 10 root        wheel    320 16 May  2025 Python 3.13
+lrwxr-xr-x@  1 root        wheel     54  2 Mar 17:07 Safari.app -> ../System/Cryptexes/App/System/Applications/Safari.app
+drwxr-xr-x@  3 rohanbatra  admin     96 10 Jul  2025 Safe Exam Browser.app
+drwxr-xr-x@  3 root        wheel     96 30 Jun  2025 Speedtest.app
+drwxr-xr-x@  3 darshbatra  staff     96 28 Feb 23:17 Spotify.app
+drwxr-xr-x@  4 root        wheel    128 29 Nov 18:14 Taco Bell IN.app
+drwxr-xr-x@  3 root        wheel     96  5 Mar 12:57 Telegram.app
+drwxr-xr-x@  3 root        wheel     96 10 Dec 20:25 The Unarchiver.app
+drwxr-xr-x@  3 rohanbatra  admin     96 25 Jul  2025 TrackWeight.app
+drwxr-xr-x@  3 root        wheel     96 29 Apr  2025 Tunnelblick.app
+drwxr-xr-x@  3 root        wheel     96 10 Feb 23:40 Turbo VPN.app
+drwxr-xr-x   6 root        wheel    192  8 Mar 23:10 Utilities
+drwxr-xr-x@  3 rohanbatra  staff     96  7 Mar 05:33 Visual Studio Code.app
+drwxr-xr-x@  3 rohanbatra  admin     96  6 Jun  2024 VLC.app
+drwxr-xr-x@  3 root        wheel     96 23 Jan 14:07 Vpnify.app
+drwxr-xr-x@  3 root        wheel     96  8 Mar 13:48 WhatsApp.app
+drwxr-xr-x@  3 root        wheel     96 28 Feb 21:14 Windows App.app
+2026-03-09 10:42:35,681 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:44:38,551 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:44:53,999 - INFO - calling tool shell
+toolargs: {'command': 'open /Applications/VLC.app'}
+tool result:Command executed.
+2026-03-09 10:45:03,042 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:45:49,068 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:45:52,396 - INFO - calling tool shell
+toolargs: {'command': 'open /Applications/Spotify.app'}
+tool result:Command executed.
+2026-03-09 10:45:56,579 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:46:09,413 - ERROR - HTTP Error for PUT to https://api.spotify.com/v1/me/player/play with Params: {} returned 404 due to Player command failed: No active device found
+2026-03-09 10:46:09,415 - INFO - calling tool play_music
+toolargs: {'query': 'Diljit Dosanjh', 'no_of_songs': 5}
+tool result:{
+  "error": " Failed to play/queue song. Error: http status: 404, code: -1 - https://api.spotify.com/v1/me/player/play:\n Player command failed: No active device found, reason: NO_ACTIVE_DEVICE"
+}
+2026-03-09 10:46:19,119 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:46:36,119 - INFO - calling tool play_music
+toolargs: {'query': 'Diljit Dosanjh', 'no_of_songs': 5}
+tool result:{
+  "active_device": "Rohan\u2019s MacBook Air",
+  "playing": "Born to Shine - Diljit Dosanjh",
+  "queued": [
+    "G.O.A.T. - Diljit Dosanjh",
+    "Lover - Diljit Dosanjh",
+    "Lemonade - Diljit Dosanjh",
+    "Hass Hass - Diljit Dosanjh"
+  ]
+}
+2026-03-09 10:46:45,714 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:50:02,451 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:50:22,264 - INFO - calling tool play_music
+toolargs: {'query': 'best songs 2024', 'no_of_songs': 8}
+tool result:{
+  "active_device": "Rohan\u2019s MacBook Air",
+  "playing": "Born to Shine - Diljit Dosanjh",
+  "queued": [
+    "G.O.A.T. - Diljit Dosanjh",
+    "Lover - Diljit Dosanjh",
+    "Lemonade - Diljit Dosanjh",
+    "Hass Hass - Diljit Dosanjh",
+    "Millionaire - Yo Yo Honey Singh",
+    "Heeriye (feat. Arijit Singh) - Jasleen Royal",
+    "Agar Tum Mil Jao - From \"Zeher\" - Shreya Ghoshal",
+    "Woh Lamhe Woh Baatein - From \"Zeher\" - Atif Aslam",
+    "Teri Meri Kahaani - Palak Muchhal",
+    "Deuces Remix (feat. Drake, T.I., Kanye West, Fabolous, Rick Ross & Andr\u00e9 3000) - Chris Brown",
+    "blind side - Tyde",
+    "175 Months - Dave"
+  ]
+}
+2026-03-09 10:50:31,989 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:50:48,820 - INFO - calling tool update_memory
+toolargs: {'section': 'user_profile', 'key': 'active_device', 'value': "Rohan's MacBook Air"}
+tool result:{'status': 'stored', 'section': 'user_profile', 'key': 'active_device'}
+2026-03-09 10:50:58,327 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:51:31,662 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:51:42,844 - INFO - calling tool play_music
+toolargs: {'query': 'Karan Aujla Softly', 'no_of_songs': 1}
+tool result:{
+  "active_device": "Rohan\u2019s MacBook Air",
+  "playing": "Softly - Karan Aujla",
+  "queued": [
+    "G.O.A.T. - Diljit Dosanjh",
+    "Lover - Diljit Dosanjh",
+    "Lemonade - Diljit Dosanjh",
+    "Hass Hass - Diljit Dosanjh",
+    "Millionaire - Yo Yo Honey Singh",
+    "Heeriye (feat. Arijit Singh) - Jasleen Royal",
+    "Agar Tum Mil Jao - From \"Zeher\" - Shreya Ghoshal",
+    "Woh Lamhe Woh Baatein - From \"Zeher\" - Atif Aslam",
+    "Teri Meri Kahaani - Palak Muchhal",
+    "Deuces Remix (feat. Drake, T.I., Kanye West, Fabolous, Rick Ross & Andr\u00e9 3000) - Chris Brown",
+    "blind side - Tyde",
+    "175 Months - Dave"
+  ]
+}
+2026-03-09 10:51:52,513 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-09 10:52:06,125 - INFO - calling tool update_memory
+toolargs: {'section': 'user_profile', 'key': 'active_device', 'value': "Rohan's MacBook Air"}
+tool result:{'status': 'stored', 'section': 'user_profile', 'key': 'active_device'}
+2026-03-09 10:52:15,482 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"

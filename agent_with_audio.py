@@ -20,6 +20,8 @@ MAX_CONVERSATION_HISTORY = 50
 loggedInUser:str=None
 memory:dict=None
 conversation_history:list = []
+
+
 def load_memory(username: str) -> dict:
     default_memory = {
         "user_profile": {"name": None, "github_username": None},

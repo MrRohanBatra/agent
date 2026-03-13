@@ -23,7 +23,6 @@ def clean_for_tts(text: str) -> str:
         elif ch in allowed_symbols:
             cleaned.append(ch)
 
-        # Convert newline/tab to space
         elif ch.isspace():
             cleaned.append(" ")
 
